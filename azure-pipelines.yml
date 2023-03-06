@@ -20,5 +20,5 @@ steps:
 - task: SonarQubePrepare@5
   inputs:
     scannerMode: 'CLI'
-    configMode: 'file'
+    configMode: 'manual'
 - task: SonarQubeAnalyze@5
