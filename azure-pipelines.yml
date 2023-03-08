@@ -7,7 +7,15 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: window-latest
+- task: SonarQubePrepare@5
+  inputs:
+    SonarQube: 'SonarQube'
+    scannerMode: 'CLI'
+    configMode: 'manual'
+    cliProjectKey: 'java_app'
+    cliProjectName: 'java_app'
+    cliSources: '.C:\sonarqube\conf\sonar.properties'
 
 steps:
 - script: echo Hello, world!
